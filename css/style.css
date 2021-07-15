@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.square {
+    width: 500px;
+    height: 500px;
+    border: 10px solid gray;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 50%;
+    height: 50%;
+    border: 5px solid gray;
+    position: relative;
+}
+
+.box:nth-child(1) {
+    background-color: steelblue;
+}
+
+.box:nth-child(2) {
+    background-color: orange;
+}
+
+.box:nth-child(3) {
+    background-color: palevioletred;
+}
+
+.box:nth-child(4) {
+    background-color: green;
+}
+
+.box__item {
+    width: 50%;
+    height: 50%;
+    font-size: 80px;
+    border: 5px solid white;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    font-weight: 900;
+
+}
+
+.one {
+    right: 0;
+    bottom: 0;
+    background-color: orange;
+}
+
+.one__item {
+    width: 110%;
+    height: 110%;
+    border: 10px solid white;
+    position: absolute;
+    top: -115%;
+    left: -115%;
+    background-color: green;
+    transition: all 1s;
+}
+
+.two {
+    bottom: 0;
+    left: 0;
+    background-color: steelblue;
+}
+
+.two__item {
+    width: 110%;
+    height: 110%;
+    border: 10px solid white;
+    border-radius: 50%;
+    position: absolute;
+    top: -115%;
+    right: -115%;
+    background-color: palevioletred;
+    transition: all 1s;
+
+}
+
+.three {
+    right: 0;
+    top: 0;
+    background-color: green;
+}
+.three__item {
+    width: 70%;
+    height: 70%;
+    border: 10px solid white;
+    position: absolute;
+    bottom: -100%;
+    left: -100%;
+    background-color: steelblue;
+    transform: rotate(45deg);
+    transition: all 1s;
+
+}
+
+.four {
+    top: 0;
+    left: 0;
+    background-color: palevioletred;
+}
+
+.four__item {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 115.5px 115.5px;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    bottom: -115%;
+    right: -115%;
+    transition: all 1s;
+
+}
+.triangle {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100px;
+    border-color: transparent transparent orange transparent;
+    position: absolute;
+    bottom: -112px;
+    right: 5px;
+    transition: all 1s;
+}
+
+.one:hover .one__item{
+    border-radius: 50%;
+    background-color: palevioletred;
+    left: -5px;
+}
+
+.two:hover .two__item{
+    border-radius: 0;
+    background-color: green;
+    top: -5px;
+}
+
+.three:hover .three__item{
+    transform: rotate(0);
+    width: 110%;
+    height: 110%;
+    left: -115%;
+    bottom: -115%;
+    background-color: orange;
+}
+.four:hover .four__item{
+    transform: rotate(180deg);
+}
+
+.four:hover .triangle{
+    border-color: transparent transparent steelblue transparent;
+}
